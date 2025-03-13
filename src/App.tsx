@@ -18,6 +18,10 @@ const quotes = [
   "Life is 10% what happens to you and 90% how you react to it. -Charles R. Swindoll",
   "Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence. -Helen Keller",
   "With the new day comes new strength and new thoughts. -Eleanor Roosevelt",
+  "Success is not final, failure is not fatal: It is the courage to continue that counts. -Winston Churchill",
+  "You are never too old to set another goal or to dream a new dream. -C.S. Lewis",
+  "The only limit to our realization of tomorrow will be our doubts of today. -Franklin D. Roosevelt",
+  "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart. -Roy T. Bennett",
 ];
 
 export default function App() {
