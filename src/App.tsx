@@ -22,6 +22,10 @@ const quotes = [
   "You are never too old to set another goal or to dream a new dream. -C.S. Lewis",
   "The only limit to our realization of tomorrow will be our doubts of today. -Franklin D. Roosevelt",
   "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart. -Roy T. Bennett",
+  "Success is walking from failure to failure with no loss of enthusiasm. -Winston Churchill",
+  "The only way to achieve the impossible is to believe it is possible. -Charles Kingsleigh",
+  "The best way to predict the future is to create it. -Peter Drucker",
+  "The future belongs to those who believe in the beauty of their dreams. -Eleanor Roosevelt",
 ];
 
 export default function App() {
