@@ -59,7 +59,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex flex-col items-center p-6">
       <h1 className="text-white text-3xl font-bold mb-4">
-        ✨ Motivational To-Do ✨
+      Motivation slay
       </h1>
 
       {/* Input field & add button */}
