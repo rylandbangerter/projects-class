@@ -1,3 +1,4 @@
+import confetti from "canvas-confetti";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -26,22 +27,24 @@ const quotes = [
   "The only way to achieve the impossible is to believe it is possible. -Charles Kingsleigh",
   "The best way to predict the future is to create it. -Peter Drucker",
   "The future belongs to those who believe in the beauty of their dreams. -Eleanor Roosevelt",
+  "You miss 100% of the shots you don't take. -Wayne Gretzky",
+  "Your limitation—it's only your imagination. -Unknown",
 ];
 
 export default function App() {
-  // State to store tasks
+  // Your states
   const [tasks, setTasks] = useState<
     { id: number; text: string; completed: boolean }[]
   >([]);
-  const [taskInput, setTaskInput] = useState(""); // State to store user input
-  const [quote, setQuote] = useState(""); // State to store motivational quote
+  const [taskInput, setTaskInput] = useState(""); 
+  const [quote, setQuote] = useState(""); 
 
   // Function to add a task
   const addTask = () => {
-    if (taskInput.trim() === "") return; // Prevent empty tasks
+    if (taskInput.trim() === "") return;
     const newTask = { id: Date.now(), text: taskInput, completed: false };
-    setTasks([...tasks, newTask]); // Update the tasks array
-    setTaskInput(""); // Clear input field after adding
+    setTasks([...tasks, newTask]);
+    setTaskInput("");
   };
 
   // Function to mark task as completed
@@ -52,17 +55,25 @@ export default function App() {
       )
     );
 
-    // Show a random motivational quote when a task is completed
     setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+    
+    // 🎉 Confetti Effect
+    confetti({
+      particleCount: 1000,
+      origin: { y: 0.6, x: 0.5 }, // Centered horizontally and slightly lower vertically
+       // Adjust the size of the confetti
+        startVelocity: 60,
+        spread: 360,
+        ticks: 600,
+        zIndex: 0,
+    });
   };
 
+  // ✅ The return should be inside the function and only appear ONCE!
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex flex-col items-center p-6">
-      <h1 className="text-white text-3xl font-bold mb-4">
-      Motivation slay
-      </h1>
+      <h1 className="text-white text-3xl font-bold mb-4">Motivation Slay</h1>
 
-      {/* Input field & add button */}
       <div className="flex space-x-2 mb-4">
         <input
           type="text"
@@ -79,7 +90,6 @@ export default function App() {
         </button>
       </div>
 
-      {/* Task list */}
       <ul className="w-full max-w-md">
         {tasks.map((task) => (
           <motion.li
@@ -103,7 +113,6 @@ export default function App() {
         ))}
       </ul>
 
-      {/* Motivational Quote Section */}
       {quote && (
         <motion.div
           className="mt-6 p-4 bg-white text-black text-lg rounded-lg shadow-md"
