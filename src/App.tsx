@@ -92,6 +92,12 @@ export default function App() {
         >
           Undo Last Task
         </button>
+        {/* TO DO <button
+          onClick={() => setTasks([])}
+          className="bg-coral text-black px-4 py-2 rounded-lg hover:bg-peach-700"
+        >
+          Clear Tasks
+        </button> */}
       </div>
 
       {/* Task List Container */}
