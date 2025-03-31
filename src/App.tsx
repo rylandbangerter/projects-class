@@ -69,7 +69,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-pink-500 to-orange-600 flex flex-col items-center p-6">
-      <h1 className="text-white text-3xl font-bold mb-4">ur mom</h1>
+      <h1 className="text-white text-3xl font-bold mb-4">ur mom- CHANGE NAME</h1>
 
       {/* Task Input */}
       <div className="flex space-x-2 mb-4">
