@@ -68,8 +68,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-pink-500 to-orange-600 flex flex-col items-center p-6">
-      <h1 className="text-white text-3xl font-bold mb-4">ur mom- CHANGE NAME</h1>
+    <div className="min-h-screen bg-skyBlue flex flex-col items-center p-6">
+      <h1 className="text-white text-3xl font-bold mb-4">---CHANGE NAME---</h1>
 
       {/* Task Input */}
       <div className="flex space-x-2 mb-4">
@@ -82,22 +82,22 @@ export default function App() {
         />
         <button
           onClick={addTask}
-          className="bg-peach text-black px-4 py-2 rounded-lg hover:bg-green-700"
+          className="bg-lavenderGray text-warmBeige px-4 py-2 rounded-lg hover:bg-sageGreen"
         >
           Add Task
         </button>
         <button
           onClick={undoLastCompletedTask}
-          className="bg-lavender text-black px-4 py-2 rounded-lg hover:bg-red-700"
+          className="bg-coolGray text-warmBeige px-4 py-2 rounded-lg hover:bg-mutedNavy"
         >
           Undo Last Task
         </button>
-        {/* TO DO <button
+        <button
           onClick={() => setTasks([])}
-          className="bg-coral text-black px-4 py-2 rounded-lg hover:bg-peach-700"
+          className="bg-coral text-warmBeige px-4 py-2 rounded-lg hover:bg-coolGray"
         >
           Clear Tasks
-        </button> */}
+        </button> 
       </div>
 
       {/* Task List Container */}
