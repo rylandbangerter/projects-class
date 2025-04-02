@@ -82,19 +82,19 @@ export default function App() {
         />
         <button
           onClick={addTask}
-          className="bg-lavenderGray text-warmBeige px-4 py-2 rounded-lg hover:bg-sageGreen"
+          className="bg-lavender text-warmBeige px-4 py-2 rounded-lg hover:bg-mutedClay"
         >
           Add Task
         </button>
         <button
           onClick={undoLastCompletedTask}
-          className="bg-coolGray text-warmBeige px-4 py-2 rounded-lg hover:bg-mutedNavy"
+          className="bg-mutedNavy text-warmBeige px-4 py-2 rounded-lg hover:bg-deepCharcoal"
         >
           Undo Last Task
         </button>
         <button
           onClick={() => setTasks([])}
-          className="bg-coral text-warmBeige px-4 py-2 rounded-lg hover:bg-coolGray"
+          className="bg-coolGray text-warmBeige px-4 py-2 rounded-lg hover:bg-warmTaupe"
         >
           Clear Tasks
         </button> 
@@ -106,8 +106,8 @@ export default function App() {
           {tasks.map((task) => (
             <motion.li
               key={task.id}
-              className={`p-3 mb-2 rounded-lg shadow-md text-white ${
-                task.completed ? "bg-pink-400 line-through" : "bg-pink-700"
+              className={`p-3 mb-2 rounded-lg shadow-md text-warmBeige ${
+                task.completed ? "bg-coolGray line-through" : "bg-brown"
               }`}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -116,9 +116,9 @@ export default function App() {
               {!task.completed && (
                 <button
                   onClick={() => completeTask(task.id)}
-                  className="ml-3 bg-yellow-500 text-black px-2 py-1 rounded-md"
+                  className="ml-80 bg-mutedNavy text-warmBeige px-3 py-1 rounded-md"
                 >
-                  ✅ Done
+                  Done!
                 </button>
               )}
             </motion.li>
