@@ -168,7 +168,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-skyBlue flex flex-col items-center p-6">
-      <h1 className="text-white text-3xl font-bold mb-4">PeakFlow Tasks</h1>
+      <h1 className="text-beige text-3xl font-bold mb-4">PeakFlow Tasks</h1>
 
       {/* Task Input */}
       <div className="flex space-x-2 mb-4">
